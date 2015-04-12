@@ -13,10 +13,10 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Snippet',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, verbose_name='ID', primary_key=True)),
-                ('name', models.CharField(default='defName', max_length=100, blank=True)),
-                ('title', models.CharField(default='defTitle', max_length=1000, blank=True)),
-                ('age', models.IntegerField(default=0, max_length=5, blank=True)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
+                ('name', models.CharField(blank=True, max_length=100, default='defName')),
+                ('title', models.CharField(blank=True, max_length=1000, default='defTitle')),
+                ('age', models.IntegerField(blank=True, max_length=5, default=0)),
             ],
         ),
     ]
